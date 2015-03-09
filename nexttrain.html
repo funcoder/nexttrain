@@ -1,0 +1,16 @@
+<head>
+  <title>Next Train</title>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="details">
+    {{>details}}
+  </div>
+</body>
+
+<template name="details">
+   <h1>{{ trainTime }}</h1>
+   <h2 class="destination">{{ trainDest }}</h2>
+   <h1>{{ trainStatus }}</h1>
+</template>

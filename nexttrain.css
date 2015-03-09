@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.details {
+    text-align: center;
+}
+
+.destination {
+    color: #94ADE3;
+}
