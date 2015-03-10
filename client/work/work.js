@@ -3,6 +3,12 @@
 Template.work.rendered = function() {
   var station = "KTN";
   
+  Session.set("workTrainTime", "");
+  Session.set("workTrainDest", "");
+  Session.set("workTrainStatus", "Loading");
+  Session.set("workStation", station);  
+  Session.set("workDetails", "")
+  
   Meteor.call('getTrainDetails', station , function (error, result) {
     if (error) {
       console.log("error", error);
@@ -14,6 +20,7 @@ Template.work.rendered = function() {
     Session.set("workTrainDest", result.dest);
     Session.set("workTrainStatus", result.status);
     Session.set("workStation", station);
+    Session.set("workDetails", station + " to " + result.dest);
   });
 
 };
@@ -32,6 +39,6 @@ Template.work.helpers({
       return Session.get("workTrainStatus");
     },
     TrainDetails: function() {
-      return Session.get("workStation") + " to " + Session.get("workTrainDest");
+      return Session.get("workDetails");
     }
 });

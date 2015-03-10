@@ -2,6 +2,13 @@
 
 Template.home.rendered = function() {
   var station = "BEC";
+  
+    Session.set("homeTrainTime", "");
+    Session.set("homeTrainDest", "");
+    Session.set("homeTrainStatus", "Loading");
+    Session.set("homeStation", station);
+    Session.set("homeDetails", "");
+  
   Meteor.call('getTrainDetails', station , function (error, result) {
     if (error) {
       console.log("error", error);
@@ -12,7 +19,7 @@ Template.home.rendered = function() {
     Session.set("homeTrainTime", result.time);
     Session.set("homeTrainDest", result.dest);
     Session.set("homeTrainStatus", result.status);
-    Session.set("homeStation", station);
+    Session.set("homeDetails", station + " to " + result.dest);
   });
 
 };
@@ -31,6 +38,6 @@ Template.home.helpers({
       return Session.get("homeTrainStatus");
     },
     TrainDetails: function() {
-      return (Session.get("homeStation") + " to " + Session.get("homeTrainDest"));
+      return Session.get("homeDetails");
     }
 });
