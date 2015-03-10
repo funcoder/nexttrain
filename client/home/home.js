@@ -29,5 +29,8 @@ Template.home.helpers({
     },
     TrainStatus: function() {
       return Session.get("homeTrainStatus");
+    },
+    TrainDetails: function() {
+      return (Session.get("homeStation") + " to " + Session.get("homeTrainDest"));
     }
 });

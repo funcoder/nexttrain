@@ -30,5 +30,8 @@ Template.work.helpers({
     },
     TrainStatus: function() {
       return Session.get("workTrainStatus");
+    },
+    TrainDetails: function() {
+      return Session.get("workStation") + " to " + Session.get("workTrainDest");
     }
 });
