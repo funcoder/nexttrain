@@ -7,7 +7,7 @@ Template.home.rendered = function() {
     Session.set("homeTrainDest", "");
     Session.set("homeTrainStatus", "Loading");
     Session.set("homeStation", station);
-    Session.set("homeDetails", "");
+    Session.set("homeDetails", ">");
   
   Meteor.call('getTrainDetails', station , function (error, result) {
     if (error) {

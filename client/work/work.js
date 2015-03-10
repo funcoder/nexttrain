@@ -7,7 +7,7 @@ Template.work.rendered = function() {
   Session.set("workTrainDest", "");
   Session.set("workTrainStatus", "Loading");
   Session.set("workStation", station);  
-  Session.set("workDetails", "")
+  Session.set("workDetails", ">")
   
   Meteor.call('getTrainDetails', station , function (error, result) {
     if (error) {
