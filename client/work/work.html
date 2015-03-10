@@ -1,6 +1,7 @@
 <template name="work">
-    <h1>{{ Station }}</h1>
-    <h2>{{ TrainTime }}</h2>
-    <h2 class="destination">{{ TrainDest }}</h2>
-    <h2>{{ TrainStatus }}</h2>
+    <li class="list-group-item">
+        <span class="badge">{{ TrainStatus }}</span>
+        {{ TrainTime }}
+        {{ Station }} to {{ TrainDest }}
+    </li>
 </template>
