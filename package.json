@@ -1,0 +1,26 @@
+{
+  "name": "nexttrain",
+  "version": "1.0.0",
+  "description": "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/funcoder/nexttrain)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funcoder/nexttrain.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funcoder/nexttrain/issues"
+  },
+  "homepage": "https://github.com/funcoder/nexttrain#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.14.0",
+    "bootstrap": "^4.6.0",
+    "cheerio": "^1.0.0-rc.9",
+    "jquery": "^3.6.0",
+    "meteor-npm": "^0.1.11"
+  }
+}
